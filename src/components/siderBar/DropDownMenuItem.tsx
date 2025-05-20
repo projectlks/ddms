@@ -54,7 +54,7 @@ export default function MenuItem({
       {/* Submenu */}
       <div
         className={`overflow-hidden transition-max-height duration-300 ease-in-out relative
-          ${isOpen && isShow ? 'max-h-fit mt-2 pl-10' : 'max-h-0'}
+          ${isOpen && isShow ? 'max-h-fit mt-2 pl-9' : 'max-h-0'}
         `}
       >
         <ul className="flex flex-col space-y-2">
@@ -65,7 +65,12 @@ export default function MenuItem({
           {subMenus.map((subMenu, index) => (
             <Link to={subMenu.route} key={index} className="w-full">
               <li className="flex items-center p-2 rounded-md cursor-pointer transition-colors duration-200 relative hover:bg-gray-200">
-                <span className="text-sm font-medium">{subMenu.label}</span>
+                <span className="text-sm font-medium w-[calc(100%-20px)] ">{subMenu.label}</span>
+
+
+                <span className="w-5 h-5 rounded-full absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white text-[10px] font-semibold flex items-center justify-center">
+                  0
+                </span>
               </li>
             </Link>
           ))}
@@ -74,7 +79,7 @@ export default function MenuItem({
 
         {/* line */}
 
-        <div className="absolute w-[1px] h-full  bg-gray-800 top-0 left-3 "></div>
+        <div className="absolute w-[1px] h-full  bg-gray-300 top-0 left-3 "></div>
       </div>
     </li>
   );

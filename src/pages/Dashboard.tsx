@@ -26,14 +26,19 @@ const Dashboard = () => {
             </div>
 
             {/* Proxy Letters Section */}
-            <div>
-                <h2 className="text-base font-bold mb-2">ကိုယ်စားလှယ်လွှဲစာ</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+
+
+            <div className="border border-gray-300 relative rounded px-4 py-6">
+                <h2 className="text-base absolute top-0 transform -translate-y-1/2 bg-gray-100 px-2 font-bold">
+                    ကိုယ်စားလှယ်လွှဲစာ
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                     {proxyLetters.map((title, index) => (
                         <Card key={index} title={title} />
                     ))}
                 </div>
             </div>
+
         </section>
     );
 };

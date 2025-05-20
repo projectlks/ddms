@@ -108,7 +108,7 @@ export default function Sidebar({ isShow, setIsShow }: SidebarProps) {
         </header>
 
         {/* Divider */}
-        <div className="w-[80%] mx-auto border-t border-gray-500 h-[1px]" />
+        <div className="w-[80%] mx-auto border-t border-gray-300 h-[1px]" />
 
         {/* Menu */}
         <div
@@ -156,68 +156,3 @@ export default function Sidebar({ isShow, setIsShow }: SidebarProps) {
   );
 }
 
-//  <DropDownMenuItem
-//             subMenus={[
-//               { label: 'ပြည်နယ်တိုင်းဒေသကြီးများ', route: '/regions' },
-//               { label: 'ခရိုင်များ', route: '/districts' },
-//               { label: 'မြို့နယ်များ', route: '/townships' },
-//               { label: 'ရုံးများ', route: '/offices' },
-//             ]}
-//             isActive={isActive === 'အုပ်ချုပ်ရေးအဆင့်အတန်း'}
-//             isShow={isShow}
-//             name="အုပ်ချုပ်ရေးအဆင့်အတန်း"
-//             icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-//               <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-//             </svg>
-
-
-//             }
-//             clickFun={clickFun}
-//           />
-
-
-
-//           <DropDownMenuItem
-//             subMenus={[
-//               { label: 'အထွေထွေ ကိုယ်စားလှယ်လွှဲစာ', route: '/power-of-attorney/general' },
-//               { label: 'အထူး ကိုယ်စားလှယ်လွှဲစာ', route: '/power-of-attorney/special' },
-//             ]}
-//             isActive={isActive === 'ကိုယ်စားလှယ်လွှဲစာ'}
-//             isShow={isShow}
-//             name="ကိုယ်စားလှယ်လွှဲစာ"
-//             icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-//               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-//             </svg>
-
-
-//             }
-//             clickFun={clickFun}
-//           />
-
-//           <DropDownMenuItem
-//             subMenus={[
-//               { label: "အရောင်းအဝယ် စာချုပ်", route: "/contracts/sale" },
-//               { label: "အမွေဆက်ခံပိုင်ဆိုင်ကြောင်း ကြေညာစာချုပ်", route: "/contracts/inheritance-declaration" },
-//               { label: "အငှားစာချုပ်", route: "/contracts/rent" },
-//               { label: "အပေးစာချုပ်", route: "/contracts/gift" },
-//               { label: "စွန့်လွှတ်စာချုပ်", route: "/contracts/release" },
-//               { label: "အစုစပ်စာချုပ်", route: "/contracts/joint" },
-//               { label: "အမှားပြင်စာချုပ်", route: "/contracts/correction" },
-//               { label: "ဖျက်သိမ်းစာချုပ်", route: "/contracts/cancel" },
-//               { label: "တရားရုံးအမိန့်အရစာချုပ် ဖျက်သိမ်းခြင်း", route: "/contracts/court-order-cancel" },
-//               { label: "စာချုပ်စာတမ်းမိတ္တူရေးကူးခြင်း", route: "/contracts/copy" },
-//               { label: "ပစ္စည်းလဲလှယ်ခြင်းစာချုပ်", route: "/contracts/exchange" },
-//               { label: "အခြားစာချုပ်", route: "/contracts/others" },
-//             ]}
-
-//             isActive={isActive === 'စာချုပ်များ'}
-//             isShow={isShow}
-//             name="စာချုပ်များ"
-//             icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-//               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-//             </svg>
-
-
-//             }
-//             clickFun={clickFun}
-//           />
