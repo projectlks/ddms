@@ -35,7 +35,7 @@ export default function Sidebar({ isShow, setIsShow }: SidebarProps) {
       <div
 
         className={`fixed xl:relative h-screen border-r border-gray-300 bg-white transition-all duration-300 overflow-x-visible
-           ${isShow ? 'w-[250px] ' : ' w-[0px] overflow-hidden xl:overflow-visible bg-red-500   xl:block xl:w-[90px]'
+           ${isShow ? 'w-[290px] ' : ' w-[0px] overflow-hidden xl:overflow-visible bg-red-500   xl:block xl:w-[90px]'
           }`}
       >
 
@@ -123,6 +123,7 @@ export default function Sidebar({ isShow, setIsShow }: SidebarProps) {
           <ul className='flex flex-col space-y-2'>
 
             <MenuItem
+              to="/"
               isShow={isShow}
               isActive={isActive === 'ဒက်ရှ်ဘုတ်'}
               name="ဒက်ရှ်ဘုတ်"

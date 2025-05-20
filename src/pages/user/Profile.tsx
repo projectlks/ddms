@@ -144,13 +144,13 @@ export default function Profile() {
             <div className="flex flex-col gap-6 lg:flex-row lg:justify-between">
               <div>
                 <h4 className="text-lg font-semibold text-gray-800 mb-4">ကိုယ်ရေးအချက်အလက်</h4>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-7 2xl:gap-x-32">
+                <div className="grid  grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-7 2xl:gap-x-32">
                   <Info label="အမည်" value="Musharof Chowdhury" />
                   <Info label="အီးမေးလ်" value="randomuser@pimjo.com" />
                   <Info label="မှတ်ပုံတင်သည့်နေ့စွဲ" value="2014-08-14 03:57:07" />
                   <Info label="နောက်ဆုံးဝင်ရောက်ချိန်" value="2025-05-20 11:50:54" />
                   <Info label="အဆင့်" value="အသုံးပြုသည်" />
-                  <div className="col-span-2 space-x-3 flex  ">
+                  <div className="lg:col-span-2 lg:space-x-3 flex flex-col lg:flex-row">
                     <button
                       onClick={onChangePassword}
                       className="mt-2 cursor-pointer text-sm border border-gray-300 rounded px-4 py-2 hover:bg-gray-100"

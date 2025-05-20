@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 interface MenuItemProps {
   name: string;
@@ -5,6 +6,7 @@ interface MenuItemProps {
   isShow: boolean;
   isActive: boolean;
   clickFun: (item: string) => void;
+  to: string
 }
 
 export default function MenuItem({
@@ -13,6 +15,7 @@ export default function MenuItem({
   isShow,
   isActive,
   clickFun,
+  to
 }: MenuItemProps) {
 
 
@@ -22,20 +25,23 @@ export default function MenuItem({
   };
 
   return (
-    <li className="relative">
-      <div
-        onClick={handleItemClick}
+    <Link to={to} className="w-full">
+      <li className="relative">
+        <div
+          onClick={handleItemClick}
 
-        className={`flex items-center p-2 rounded-md cursor-pointer transition-all relative
-        ${isShow ? 'space-x-3 justify-start' : 'justify-center space-x-0'}
-        ${isActive ? 'bg-blue-100 text-blue-600 hover:bg-blue-100 hover:text-blue-600' : 'hover:bg-gray-100'}`}
-      >
-        {icon}
-        <span className={`text-sm font-medium ${isShow ? 'block' : 'hidden'}`}>{name}</span>
+          className={`flex items-center p-2 rounded-md cursor-pointer transition-all relative
+          ${isShow ? 'space-x-3 justify-start' : 'justify-center space-x-0'}
+          ${isActive ? 'bg-blue-100 text-blue-600 hover:bg-blue-100 hover:text-blue-600' : 'hover:bg-gray-100'}`}
+        >
+          {icon}
+          <span className={`text-sm font-medium ${isShow ? 'block' : 'hidden'}`}>{name}</span>
 
-      </div>
+        </div>
 
 
-    </li>
+      </li>
+
+    </Link>
   );
 }

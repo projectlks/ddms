@@ -35,7 +35,7 @@ export default function MenuItem({
         ${isActive ? 'bg-blue-100 text-blue-600 hover:bg-blue-100 hover:text-blue-600' : 'hover:bg-gray-100'}`}
       >
         {icon}
-        <span className={`text-xs font-medium ${isShow ? 'block' : 'hidden'}`}>{name}</span>
+        <span className={`text-sm font-medium ${isShow ? 'block' : 'hidden'}`}>{name}</span>
 
         <i className={`absolute right-2 top-1/2 transform -translate-y-1/2 transition-all duration-300 hover:scale-110 ${isShow ? 'block' : 'hidden'}`}>
           <svg
@@ -53,8 +53,8 @@ export default function MenuItem({
 
       {/* Submenu */}
       <div
-        className={`overflow-hidden transition-max-height duration-300 ease-in-out
-          ${isOpen && isShow ? 'max-h-fit mt-2 pl-4' : 'max-h-0'}
+        className={`overflow-hidden transition-max-height duration-300 ease-in-out relative
+          ${isOpen && isShow ? 'max-h-fit mt-2 pl-10' : 'max-h-0'}
         `}
       >
         <ul className="flex flex-col space-y-2">
@@ -65,20 +65,19 @@ export default function MenuItem({
           {subMenus.map((subMenu, index) => (
             <Link to={subMenu.route} key={index} className="w-full">
               <li className="flex items-center p-2 rounded-md cursor-pointer transition-colors duration-200 relative hover:bg-gray-200">
-                <span className="text-xs font-medium">{subMenu.label}</span>
+                <span className="text-sm font-medium">{subMenu.label}</span>
               </li>
             </Link>
           ))}
         </ul>
+
+
+        {/* line */}
+
+        <div className="absolute w-[1px] h-full  bg-gray-800 top-0 left-3 "></div>
       </div>
     </li>
   );
 }
 
 
-{/* <li className="flex items-center p-2 rounded-md cursor-pointer transition-colors duration-200 relative hover:bg-gray-200">
-            <span className="text-sm font-medium">Sub Item 1</span>
-          </li>
-          <li className="flex items-center p-2 rounded-md cursor-pointer transition-colors duration-200 relative hover:bg-gray-200">
-            <span className="text-sm font-medium">Sub Item 2</span>
-          </li> */}

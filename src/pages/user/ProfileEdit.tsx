@@ -15,7 +15,7 @@ export default function ProfileEdit() {
 
     return (
         <>
-         
+
 
             <Breadcrumb
                 crumbs={[
@@ -65,7 +65,7 @@ export default function ProfileEdit() {
                 </div>
 
                 <div className="h-[calc(100%-80px)] flex items-center justify-center  ">
-                    <form className="flex flex-col space-y-5 max-w-xl w-full">
+                    <form className="flex flex-col space-y-5 max-w-xl w-[90%]  not-only-of-type:">
 
                         <p>
                             <span className="inline text-red-500 mr-1">*</span>
