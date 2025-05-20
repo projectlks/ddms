@@ -8,7 +8,7 @@ interface HeaderProps {
 export default function Header({ isShow, setIsShow }: HeaderProps) {
   return (
     <div className="w-full py-2 bg-white text-gray-800 flex items-center justify-between px-8 relative">
-      <h1 className="text-lg hidden xl:block font-bold">My App</h1>
+      <h1 className="text-lg hidden xl:block font-bold">DDMS SYSTEM</h1>
 
       {/* Mobile Menu Icon */}
       <button
