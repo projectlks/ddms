@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Profile() {
@@ -80,8 +81,8 @@ export default function Profile() {
                     className="flex flex-col gap-1 border-b border-gray-200 pb-3 pt-4"
                 >
                     <li>
-                        <a
-                            href="#"
+                        <Link to={'profile'}
+                         
                             className="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-700"
                         >
                             <svg
@@ -99,12 +100,12 @@ export default function Profile() {
                                     fill=""
                                 ></path>
                             </svg>
-                            Edit profile
-                        </a>
+                            ပရိုဖိုင်
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#"
+                        <Link
+                            to="/profile/edit"
                             className="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-700"
                         >
                             <svg
@@ -122,13 +123,14 @@ export default function Profile() {
                                     fill=""
                                 ></path>
                             </svg>
-                            Account settings
-                        </a>
+                            အကောင့် ဆက်တင်များ
+                        </Link>
                     </li>
 
                 </ul>
+                <Link to={'login'}>
                 <button
-                    className="group mt-3 flex items-center gap-3 w-full justify-center rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                    className="group mt-3 cursor-pointer flex items-center gap-3 w-full justify-center rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
                 >
                     <svg
                         className="fill-gray-500 group-hover:fill-gray-700"
@@ -146,8 +148,9 @@ export default function Profile() {
                         ></path>
                     </svg>
 
-                    Sign out
+                    အကောင့်မှ ထွက်မည်
                 </button>
+                </Link>
             </div>}
         </div>
 

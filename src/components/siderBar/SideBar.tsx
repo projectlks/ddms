@@ -46,8 +46,12 @@ export default function Sidebar({ isShow, setIsShow }: SidebarProps) {
 
           {/* profile picture */}
           <div className="w-[60px] aspect-square h-[60px] bg-gray-800 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+            {/* <span className=' leading-none '>
+              H
+            </span> */}
             H
           </div>
+
 
           {/* User Info */}
           <div className={` flex-col  items-center space-y-1 `}>
@@ -75,13 +79,16 @@ export default function Sidebar({ isShow, setIsShow }: SidebarProps) {
                   </svg>
                 </i>
               </Link>
-              <i className='cursor-pointer w-7 h-7 flex items-center justify-center rounded hover:bg-gray-100 transition-all duration-300'>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
-                </svg>
 
-              </i>
+              <Link to={'/login'}>
 
+                <i className='cursor-pointer w-7 h-7 flex items-center justify-center rounded hover:bg-gray-100 transition-all duration-300'>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
+                  </svg>
+
+                </i>
+              </Link>
             </span>
           </div>
           {/* Toggle Button */}

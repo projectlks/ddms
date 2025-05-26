@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 interface MenuItemProps {
@@ -22,9 +22,19 @@ export default function MenuItem({
 
   const handleItemClick = () => {
     clickFun(name);
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
+
   };
 
+  useEffect(() => {
+    if (isActive) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  }, [isActive]);
+
+  
   return (
     <li className="relative">
       <div
@@ -54,7 +64,7 @@ export default function MenuItem({
       {/* Submenu */}
       <div
         className={`overflow-hidden transition-max-height duration-300 ease-in-out relative
-          ${isOpen && isShow ? 'max-h-fit mt-2 pl-9' : 'max-h-0'}
+          ${isOpen && isShow && isActive ? 'max-h-fit mt-2 pl-9' : 'max-h-0'}
         `}
       >
         <ul className="flex flex-col space-y-2">
