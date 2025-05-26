@@ -10,7 +10,7 @@ import ProfileUpdate from "../pages/user/ProfileUpdate";
 const router = createBrowserRouter([
 
   {
-    path: '/login',
+    path: 'login',
     element: <Login />
   },
   {
